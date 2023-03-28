@@ -4,5 +4,5 @@ Learning how to build my own custom rom (based off LineageOS
 
 To initialize your local repository using the LineageOS trees, use a command like this:
 ```
-repo init -u https://github.com/minicam2/mesu -b lineage-19.1 --git-lfs
+repo init -u https://github.com/minicam2/mesu -b mesu-13.0 --git-lfs
 

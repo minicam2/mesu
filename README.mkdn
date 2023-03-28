@@ -1,7 +1,11 @@
 Mesu
+-------
 
 Learning how to build my own custom rom named Mesu, based off LineageOS
 
+
+Setting up the build environment
+-------------------------------
 
 Before downloading, make sure to download the required packages (presumed you're building on Ubuntu 22.04.1 like me):
 ``` 
@@ -78,6 +82,7 @@ repo sync -j8
 
 
 Adding vendor files
+------------------------------------------
 
 Download the specific proprietary blobs that will apply to your build from The Muppets' repository
 For example, the proprietary blobs for a Google Pixel 5 under the mesu-11.1 branch is at the following link:
@@ -124,6 +129,8 @@ Once you're done, you'll have two important files used to install the build.
 
 
 Installation
+-------------------------------
+
 Note: Make sure you have an updated version of ```platform-tools``` and that you have enabled USB debugging on your device.
 
 If you haven't unlocked the bootloader already, do so by booting into fastboot:

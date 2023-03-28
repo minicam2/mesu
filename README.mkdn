@@ -21,11 +21,13 @@ mkdir -p ~/bin
 mkdir -p ~/android/mesu
 ```
 
+
 Install the repo command
 ```
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 ```
+
 
 Configure git if necessary
 ```
@@ -33,25 +35,34 @@ git config --global user.email <insert email here>
 git config --global user.name <insert name tag here>
 ```
 
+
 Turning on caching (speeds up build)
 ```
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
 ```
+
+
 Then specify the maximum amount of disk space ccache can use
 ```
 ccache -M 100G
 
 ```
+
+
 Optional: turn on ccache compression
 ```
 ccache -o compression=true
 ```
 
+
+
 To initialize your local repository using the Mesu trees, use a command like this:
 ```
 repo init -u https://github.com/minicam2/mesu -b mesu-11.1 --git-lfs
 ```
+
+
 
 You are then able to download the source code with:
 ```
@@ -63,6 +74,9 @@ repo sync -j8
 ```
 
 
+
+
+
 Adding vendor files
 
 Download the specific proprietary blobs that will apply to your build from The Muppets' repository
@@ -71,16 +85,19 @@ For example, the proprietary blobs for a Google Pixel 5 under the mesu-11.1 bran
 https://github.com/TheMuppets/proprietary_vendor_google/tree/lineage-18.1/redfin
 ```
 
+
 As for the current branch of Mesu, the proprietary blobs are available under a different subdirectory:
 ```
 https://github.com/TheMuppets/proprietary_vendor_google_redfin
 ```
+
 
 Download the files from the requisite repository and copy them to the vendor folder within the root of the source code under a parent folder named after the specific device.
 For example, here's what it should look like for a Pixel 5:
 ```
 android/mesu/vendor/google/redfin
 ```
+
 
 If these proprietary blobs fail, you can always extract them from a device you intend on building for, running the android version you wish:
 ```
@@ -97,9 +114,13 @@ brunch <device name>
 ```
 
 
+
 Once you're done, you'll have two important files used to install the build.
 1. ```boot.img``` the boot image from where you'd install the build using the installer package
 2. ```mesu-13.0-<date of build>-UNOFFICALl-<device>.zip``` the installer package 
+
+
+
 
 
 Installation
@@ -109,15 +130,20 @@ If you haven't unlocked the bootloader already, do so by booting into fastboot:
 ```
 adb reboot bootloader
 ```
+
+
 Once it has finished booting into fastboot mode, you can always make sure your computer can communicate with the device with:
 ```
 fastboot devices
 ```
+
+
 Now, to unlock the bootloader run the command
 ```
 fastboot flashing unlock
 ```
 Note: the command for unlocking the bootloader may vary depending on your device, check XDA Forums or the lineage OS wiki if you're not sure
+
 
 
 Booting into Mesu recovery
@@ -128,10 +154,15 @@ As always, check your computer can communicate to the device with
 ```
 fastboot devices
 ```
+
+
+
 Then simply run the code below to boot into the Mesu Recovery
 ```
 fastboot flash vendor_boot <add the boot.img file here>
 ```
+
+
 
 From here, select the recovery option from the bootloader.
 It's very important to format the data, do that selecting the option from recovery and then run the "apply update" option from where in you'd need to sideload the installer package 
@@ -139,6 +170,7 @@ It's very important to format the data, do that selecting the option from recove
 adb sideload <add the installer package here>
 ```
 Note: If you wish to install Gapps on your device, sideload it first before sideloading the Mesu installer package
+
 
 Once done, you can reboot the device.
 Nesu has finally been installed

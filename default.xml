@@ -193,7 +193,7 @@
   <project path="external/google-fonts/fraunces" name="platform/external/google-fonts/fraunces" groups="pdk" remote="aosp" />
   <project path="external/google-fonts/karla" name="platform/external/google-fonts/karla" groups="pdk" remote="aosp" />
   <project path="external/google-fonts/lato" name="platform/external/google-fonts/lato" groups="pdk" remote="aosp" />
-  <project path="external/google-fonts/georgia" name="https://github.com/minicam2/mesu/tree/mesu-13.0/external/google-fonts/georgia" remote="github" />
+  <project path="external/google-fonts/georgia" name="minicam2/mesu/tree/mesu-13.0/external/google-fonts/georgia" remote="github" />
   <project path="external/google-fonts/lustria" name="platform/external/google-fonts/lustria" groups="pdk" remote="aosp" />
   <project path="external/google-fonts/rubik" name="platform/external/google-fonts/rubik" groups="pdk" remote="aosp" />
   <project path="external/google-fonts/source-sans-pro" name="platform/external/google-fonts/source-sans-pro" groups="pdk" remote="aosp" />

@@ -197,7 +197,7 @@
   <project path="external/google-fonts/rubik" name="platform/external/google-fonts/rubik" groups="pdk" remote="aosp" />
   <project path="external/google-fonts/source-sans-pro" name="platform/external/google-fonts/source-sans-pro" groups="pdk" remote="aosp" />
   <project path="external/google-fonts/zilla-slab" name="platform/external/google-fonts/zilla-slab" groups="pdk" remote="aosp" />
-  <project path="external/google-fonts" name="minicam2/google-fonts" remote="github" />
+  <project path="external/google-fonts/georgia" name="minicam2/georgia" remote="github" />
   <project path="external/google-fruit" name="platform/external/google-fruit" groups="pdk" remote="aosp" />
   <project path="external/google-java-format" name="platform/external/google-java-format" groups="pdk" remote="aosp" />
   <project path="external/google-styleguide" name="platform/external/google-styleguide" groups="pdk" remote="aosp" />
